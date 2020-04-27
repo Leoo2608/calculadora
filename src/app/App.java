@@ -15,42 +15,7 @@ public class App {
         System.out.println("5. Salir         ");
         System.out.print("Opcion: ");
     }
-    public static void suma(){
-        double num1, num2, res;
-        System.out.print("Digite el primer numero: ");
-        num1 = Double.valueOf(t.nextLine());
-        System.out.print("Digite el segundo numero: ");
-        num2 = Double.valueOf(t.nextLine());
-        res = num1 + num2;
-        System.out.println("Respuesta: "+ res);
-    }
-    public static void resta(){
-        double num1, num2, res;
-        System.out.print("Digite el primer numero: ");
-        num1 = Double.valueOf(t.nextLine());
-        System.out.print("Digite el segundo numero: ");
-        num2 = Double.valueOf(t.nextLine());
-        res = num1 - num2;
-        System.out.println("Respuesta: "+ res);
-    }
-    public static void multiplicacion(){
-        double num1, num2, res;
-        System.out.print("Digite el primer numero: ");
-        num1 = Double.valueOf(t.nextLine());
-        System.out.print("Digite el segundo numero: ");
-        num2 = Double.valueOf(t.nextLine());
-        res = num1 * num2;
-        System.out.println("Respuesta: "+ res);
-    }
-    public static void division(){
-        double num1, num2, res;
-        System.out.print("Digite el primer numero: ");
-        num1 = Double.valueOf(t.nextLine());
-        System.out.print("Digite el segundo numero: ");
-        num2 = Double.valueOf(t.nextLine());
-        res = num1 / num2;
-        System.out.println("Respuesta: "+ res);
-    }
+    
     public static void salir(){
         System.out.println("Programa finalizado!");
     }
@@ -59,20 +24,21 @@ public class App {
     }
     public static void inicio(){
         int op;
+        Procesos p = new Procesos();
         do {
             menu();
             op = Integer.valueOf(t.nextLine());
             switch (op) {
-                case 1: suma();
+                case 1: p.suma();
                     
                     break;
-                case 2: resta();
+                case 2: p.resta();
 
                     break;
-                case 3:multiplicacion();
+                case 3: p.multiplicacion();
 
                     break;
-                case 4:division();
+                case 4: p.division();
 
                     break;
                 case 5: salir();
